@@ -1,0 +1,45 @@
+.container{
+    background-color: black;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 450px;
+    padding-right: 450px;
+}
+
+.upperContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    img{
+        width: 260px;
+        height: 260px;
+        border-radius: 100%;
+        margin-top: 40px;
+    }
+}
+
+.content{
+    color: white;
+
+    .txtRed{
+        color: #FA2759;
+    }
+
+    .txtTurquoise{
+        color: #2DFCD8;
+        display: inline-block;
+        -webkit-transform: rotate(-30deg);
+        transform: translateY(-0.5px) rotate(-20deg);
+        letter-spacing: 1.5px;
+    }
+
+    button{
+        padding: 24px 105px 24px 105px;
+    }
+}
