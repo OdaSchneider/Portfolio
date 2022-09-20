@@ -5,8 +5,8 @@ header{
     top: 0;
     height: auto;
     z-index: 10;
-    padding-left: 450px;
-    padding-right: 450px;
+    padding-left: 200px;
+    padding-right: 200px;
     padding-top: 24px;
 
     display: flex;
@@ -19,9 +19,11 @@ header{
         margin-left: 32px;
         font-weight: 500;
         font-size: 18px;
+        transition: 150ms ease-in;
 
         &:hover{
-            color: rgba(255,255,255,0.8);
+            color: #FA2759;
+            transition: 150ms ease-in;
         }
     }
 

@@ -8,6 +8,7 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { StartpageComponent } from './startpage/startpage.component';
+import { ArrowAnimationComponent } from './arrow-animation/arrow-animation.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { StartpageComponent } from './startpage/startpage.component';
     DataProtectionComponent,
     MainpageComponent,
     StartpageComponent,
+    ArrowAnimationComponent,
   ],
   imports: [
     BrowserModule,
