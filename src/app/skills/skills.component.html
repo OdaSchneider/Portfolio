@@ -1,0 +1,12 @@
+<div id="skills" class="container">
+    <h2 data-aos="zoom-in">Skillset</h2>
+    <div class="content">
+        <div *ngFor="let skill of skills; let i = index" class="contentBox">
+            <div class="contentImg">
+                <img src="./../../assets/img/icons/skills/{{skill.img}}">
+            </div>
+            <div class="contentSkill">
+                <span>{{skill.name}}</span>
+            </div>
+        </div>
+    </div>

@@ -9,6 +9,7 @@ import { DataProtectionComponent } from './data-protection/data-protection.compo
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { StartpageComponent } from './startpage/startpage.component';
 import { ArrowAnimationComponent } from './arrow-animation/arrow-animation.component';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ArrowAnimationComponent } from './arrow-animation/arrow-animation.compo
     MainpageComponent,
     StartpageComponent,
     ArrowAnimationComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
