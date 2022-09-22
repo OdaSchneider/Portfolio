@@ -10,6 +10,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { StartpageComponent } from './startpage/startpage.component';
 import { ArrowAnimationComponent } from './arrow-animation/arrow-animation.component';
 import { SkillsComponent } from './skills/skills.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SkillsComponent } from './skills/skills.component';
     StartpageComponent,
     ArrowAnimationComponent,
     SkillsComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,

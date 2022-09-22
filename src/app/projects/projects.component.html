@@ -1,0 +1,31 @@
+<div class="bg">
+    <div id="projects" class="container">
+        <h2 data-aos="zoom-in">Projects</h2>
+        <div class="buttonLine">
+            <button (click)=" showProjects('all')" [class.active]="categories.all"  data-aos="zoom-in">
+                All
+            </button>
+
+            <button (click)=" showProjects('angular')" [class.active]="categories.angular" data-aos="zoom-in">
+                Angular
+            </button>
+
+            <button (click)=" showProjects('javascript')" [class.active]="categories.javascript" data-aos="zoom-in">
+                JavaScript
+            </button>
+        </div>
+
+        <div class="flexBox">
+            <div *ngFor="let project of projectFilter; let i = index" class="content">
+                <div class="contentBox" data-aos="zoom-in" style="background-image: url('assets/img/{{project.img}}')">
+                    <div class="contentProject">
+                        <p>{{project.name}}</p><br>
+                        <span>{{project.description}}</span><br>
+                        <button>Try out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

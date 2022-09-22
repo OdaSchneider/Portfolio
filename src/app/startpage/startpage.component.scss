@@ -1,13 +1,18 @@
+.bg{
+    height: calc(100vh - 80px);
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .container{
-    background-color: black;
-    height: 100vh;
-    width: calc(100% - 400px);
+    width: 100%;
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 200px;
-    padding-right: 200px;
 }
 
 .upperContainer{
@@ -41,7 +46,14 @@
     }
 
     button{
+        border: 1px solid #2DFCD8;
+        color: #2DFCD8;
         padding: 24px 105px 24px 105px;
         margin-top: 32px;
+
+        &:hover{
+            color: white;
+            background-color: #2dfcd9a4;
+        }
     }
 }

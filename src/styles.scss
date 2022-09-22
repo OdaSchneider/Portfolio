@@ -21,16 +21,12 @@ p{
 
 button {
     background-color: black;
-    border: 1px solid #2DFCD8;
-    color: #2DFCD8;
     font-size: 18px;
     font-family: 'Roboto Flex', sans-serif;
     cursor: pointer;
     transition: 250ms ease-in;
 
     &:hover{
-        color: white;
-        background-color: #2dfcd9a4;
         transition: 250ms ease-in;
     }
 }
