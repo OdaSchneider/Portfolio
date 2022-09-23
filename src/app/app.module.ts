@@ -11,6 +11,7 @@ import { StartpageComponent } from './startpage/startpage.component';
 import { ArrowAnimationComponent } from './arrow-animation/arrow-animation.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProjectsComponent } from './projects/projects.component';
     ArrowAnimationComponent,
     SkillsComponent,
     ProjectsComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+.bg{
+    background-color: #1A1A1A;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 64px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+}
+
+.indroductionContainer{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 100%;
+        margin-top: 40px;
+    }
+
+}
