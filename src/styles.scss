@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Exo';
+    font-family: 'Exo', 'Dosis', 'Roboto Flex', sans-serif;
 }
 
 h1{
@@ -30,7 +30,7 @@ p{
 button {
     background-color: black;
     font-size: 18px;
-    font-family: 'Roboto Flex', sans-serif;
+    font-family:  'Exo','Roboto Flex', sans-serif;
     cursor: pointer;
     transition: 250ms ease-in;
 

@@ -12,6 +12,8 @@ import { ArrowAnimationComponent } from './arrow-animation/arrow-animation.compo
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,10 +27,12 @@ import { AboutComponent } from './about/about.component';
     SkillsComponent,
     ProjectsComponent,
     AboutComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

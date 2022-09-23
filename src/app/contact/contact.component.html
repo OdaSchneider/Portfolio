@@ -1,0 +1,20 @@
+<div class="bg">
+    <div id="contact" class="container">
+        <div class="headline">
+            <h2>Contact me</h2>
+            <p>Get in touch via the form below or by emailing <a href="mailto:email@example.com">email@example.com</a> </p>
+        </div>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <label data-aos="zoom-in" for="name">Name</label>
+            <input type="text" id="name" data-aos="zoom-in" formControlName="name" placeholder="Enter your name">
+
+            <label data-aos="zoom-in" for="email">Email address</label>
+            <input type="text" id="email" data-aos="zoom-in" formControlName="email" placeholder="Enter your Email address">
+            
+            <label data-aos="zoom-in" for="message">Message</label>
+            <textarea type="text" id="message" data-aos="zoom-in" formControlName="message" placeholder="Enter your message"></textarea>
+            
+            <button type="submit" [disabled]="!contactForm.valid">Send</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+.bg{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 64px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    h2{
+        color: #2DFCD8;
+    }
+}
+
+.headline{
+    text-align: center;
+
+    a{
+        text-decoration: none;
+        color:#2DFCD8;
+    }
+}
+
+
+form {
+    padding-top: 48px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        color: white;
+        font-weight: 600;
+    }
+
+    input {
+        margin: 12px 0px 24px 0px;
+        background-color: rgb(26, 26, 26);
+        border: none;
+        padding: 12px;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+
+        &::placeholder {
+            color: rgb(167, 167, 167);
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    textarea {
+        background-color: rgb(26, 26, 26);
+        border: none;
+        padding: 12px;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-family: 'Roboto Flex', sans-serif;
+        resize: none;
+        margin: 12px 0px 24px 0px;
+
+        &::placeholder {
+            color: rgb(167, 167, 167);
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    button{
+        color: #2DFCD8;
+        border: 1px solid #2DFCD8;
+        padding: 12px 40px 12px 40px;
+        margin-top: 32px;
+        width: 150px;
+        transform: translateX(400px);
+    
+        &:hover{
+            color: white;
+            background-color: #2dfcd9a4;
+        }
+
+        &:disabled{
+            color: white;
+            background-color: #2dfcd9a4;
+            opacity: 0.4;
+            cursor: default;
+        }
+    }
+
+    .ng-invalid.ng-touched{
+        border: 1px solid #FA2759;
+    }
+
+    .ng-valid.ng-touched{
+        border: 1px solid #2dfcd9a4;
+    }
+}
