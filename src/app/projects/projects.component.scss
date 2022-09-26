@@ -113,4 +113,13 @@
         border: 1px solid #FA2759;
         transition: all 250ms ease-in-out;
     }
+
+    a{
+        text-decoration: none;
+        color: #FA2759;
+
+        &:hover{
+            color: white;
+        }
+    }
 }

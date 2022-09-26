@@ -17,6 +17,7 @@ export class ProjectsComponent{
       name: 'Pokedex',
       description: 'Famous poke-lexicon created with PokeAPI',
       category: 'javascript',
+      link: 'https://oda-schneider.com/pokedex/index.html',
       img: 'pokedex.png'
     },
     {
