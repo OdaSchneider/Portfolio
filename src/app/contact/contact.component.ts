@@ -53,11 +53,11 @@ export class ContactComponent implements OnInit{
     formData.append('name', name.value);
     formData.append('email', email.value);
     formData.append('message', message.value);
-    await fetch('#'),
+    await fetch('https://oda-schneider.com/send_mail/send_mail.php',
     {
       method: 'POST',
       body: formData
-    }
+    });
   }
 
 
