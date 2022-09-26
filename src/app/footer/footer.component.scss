@@ -1,9 +1,10 @@
 .bg{
     background-color: rgb(228, 228, 228);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 150px;
+    height: auto;
 }
 
 .container{
@@ -13,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
     div{
-        padding: 32px 16px 32px 16px;
+        padding: 32px 16px 16px 16px;
     }
 }
 
@@ -37,4 +38,11 @@ span{
         height: 50px;
         margin-left: 32px;
     }
+}
+
+.reference{
+    width: 100%;
+    font-size: 12px;
+    padding: 0px 0px 12px 32px;
+    max-width: 1000px;
 }
