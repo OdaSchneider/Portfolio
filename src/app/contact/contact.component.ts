@@ -1,5 +1,6 @@
-import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import { FormControl, FormGroup, Validators} from '@angular/forms'
+import { HttpClient } from '@angular/common/http';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-contact',
@@ -7,65 +8,60 @@ import { FormControl, FormGroup, Validators} from '@angular/forms'
   styleUrls: ['./contact.component.scss']
 })
 
-export class ContactComponent implements OnInit{
-  @ViewChild('myForm') myForm: ElementRef;
-  @ViewChild('name') name: ElementRef;
-  @ViewChild('email') email: ElementRef;
-  @ViewChild('message') message: ElementRef;
-  @ViewChild('sendButton') sendButton: ElementRef;
+export class ContactComponent implements OnInit {
+  @ViewChild('sendButton') sendButton!: ElementRef;
 
   contactForm: FormGroup;
-  // formStatus: string;
+  submit: boolean = false;
+  report: string = '';
+  url: string = 'https://oda-schneider.com/send_mail/sendMail.php';
 
-  ngOnInit(){
+
+  constructor(private http: HttpClient) {
+
+  }
+
+
+  ngOnInit() {
     this.contactForm = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
       message: new FormControl('', Validators.required)
     });
-
-    // this.contactForm.statusChanges.subscribe((value) => {
-    //   this.formStatus = value;
-    // })
-  }
-
-  async onSubmit(){
-    let name =  this.name.nativeElement;
-    let email = this.email.nativeElement;
-    let message = this.message.nativeElement;
-    let sendButton = this.sendButton.nativeElement;
-    this.disableElements(name, email, message, sendButton);
-    await this.sendMail(name, email, message);
-    this.enableElements(name, email, message, sendButton);
   }
 
 
-  disableElements(name, email, message, sendButton){
-    name.disabled = true;
-    email.disabled = true;
-    message.disabled = true;
-    sendButton.disabled = true;
+  onSubmit(myForm: any) {
+    this.sendButton.nativeElement.disabled = true;
+    this.http
+      .post(this.url, myForm.value)
+      .subscribe(
+        response => this.response(response, myForm),
+        error => this.error(error, myForm)
+      );
   }
 
 
-  async sendMail(name, email, message){
-    let formData = new FormData();
-    formData.append('name', name.value);
-    formData.append('email', email.value);
-    formData.append('message', message.value);
-    await fetch('https://oda-schneider.com/send_mail/send_mail.php',
-    {
-      method: 'POST',
-      body: formData
-    });
+  response(response, myForm) {
+    console.log(response);
+    this.submit = true;
+    this.report = 'Message send successfully';
+    myForm.reset();
   }
 
 
-  enableElements(name, email, message, sendButton){
-    name.disabled = false;
-    email.disabled = false;
-    message.disabled = false;
-    sendButton.disabled = false;
+  error(error, myForm) {
+    console.log(error);
+    this.submit = true;
+    this.report = 'Unfortunately, there seems to be a problem. Please try the direct email link above for contact';
+    myForm.reset();
+  }
+
+
+  closePopup() {
+    this.submit = false;
+    this.report = '';
+    this.sendButton.nativeElement.disabled = false;
   }
 
 }

@@ -4,17 +4,21 @@
             <h2>Contact me</h2>
             <p>Get in touch via the form below or by emailing <a href="mailto:contact@oda-schneider.com">contact@oda-schneider.com</a> </p>
         </div>
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" #myForm>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit(myForm)" #myForm="ngForm" ngNativeValidate novalidate>
             <label data-aos="zoom-in" for="name">Name</label>
-            <input type="text" name="name" data-aos="zoom-in" formControlName="name" placeholder="Enter your name" #name>
+            <input type="text" name="name" data-aos="zoom-in" formControlName="name" ngModel placeholder="Enter your name" #name>
 
             <label data-aos="zoom-in" for="email">Email address</label>
-            <input type="text" name="email" data-aos="zoom-in" formControlName="email" placeholder="Enter your Email address" #email>
+            <input type="email" name="email" data-aos="zoom-in" formControlName="email" ngModel placeholder="Enter your Email address" #email>
             
             <label data-aos="zoom-in" for="message">Message</label>
-            <textarea type="text" name="message" data-aos="zoom-in" formControlName="message" placeholder="Enter your message" #message></textarea>
+            <textarea type="text" name="message" data-aos="zoom-in" formControlName="message" ngModel placeholder="Enter your message" #message></textarea>
             
             <button type="submit" [disabled]="!contactForm.valid" #sendButton>Send</button>
         </form>
+        <div [class.display]="submit" [class.d-none]="!submit">
+            <p>{{report}}</p>
+            <button *ngIf="submit" (click)="closePopup()">Ok</button>
+        </div>
     </div>
 </div>
