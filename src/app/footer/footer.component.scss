@@ -30,6 +30,19 @@ a{
 
 span{
     color: rgb(122, 122, 122);
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.pageLinks{
+    display: flex;
+    align-items: center;
+
+    img{
+        height: 40px;
+        cursor: pointer;
+        margin-right: 40px;
+    }
 }
 
 .socialLinks{
@@ -38,11 +51,4 @@ span{
         height: 50px;
         margin-left: 32px;
     }
-}
-
-.reference{
-    width: 100%;
-    font-size: 12px;
-    padding: 0px 0px 12px 32px;
-    max-width: 1000px;
 }

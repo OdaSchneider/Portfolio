@@ -9,8 +9,9 @@ export class ProjectsComponent{
   projects: any = [
     {
       name: 'El Pollo Loco',
-      description: 'JavaScript - based 2D jump and run game',
+      description: 'JavaScript - based object-oriented 2D jump and run game',
       category: 'javascript',
+      link: 'https://oda-schneider.com/Pollo%20Loco/index.html',
       img: 'polloLoco.jpg'
     },
     {
@@ -24,6 +25,7 @@ export class ProjectsComponent{
       name: 'JOIN',
       description: 'Kanban-Board created in group work',
       category: 'javascript',
+      link: 'https://oda-schneider.com/Join/index.html',
       img: 'join.jpg'
     },
     {
