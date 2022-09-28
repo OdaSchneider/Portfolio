@@ -1,9 +1,9 @@
 header{
     height: 80px;
-    z-index: 10;
     background-color: black;
     display: flex;
     justify-content: center;
+    z-index: 10;
 }
 
 .menu{
@@ -34,5 +34,121 @@ header{
     .active{
         color: #FA2759;
     }
+
+    .navContainer {
+        display: none;
+
+        input {
+            position: absolute;
+            top: 36%;
+            right: 10%;
+            margin: 0;
+            height: 26px;
+            width: 32px;
+            z-index: 20;
+            opacity: 0;
+            cursor: pointer;
+        }
+    
+        div {
+            position: absolute;
+            top: 36%;
+            right: 10%;
+            height: 26px;
+            width: 32px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            .line {
+                height: 4px;
+                width: 100%;
+                border-radius: 10px;
+                background: #ffffff;
+            }
+    
+            .line1 {
+                transform-origin: 0% 0%;
+                transition: transform 0.4s ease-in-out;
+            }
+    
+            .line2 {
+                transition: transform 0.2s ease-in-out;
+            }
+    
+            .line3 {
+                transform-origin: 0% 100%;
+                transition: transform 0.4s ease-in-out;
+            }
+        }
+    
+        input[type="checkbox"]:checked~div .line1 {
+            transform: rotate(45deg);
+        }
+    
+        input[type="checkbox"]:checked~div .line2 {
+            transform: scaleY(0);
+        }
+    
+        input[type="checkbox"]:checked~div .line3 {
+            transform: rotate(-45deg);
+        }
+    }
 }
+
+.responsiveMenu{
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 32px);
+    position: absolute;
+    right: 0;
+    left: 0;
+    transition: all .25s ease-in-out;
+}
+
+.hideRespMenu{
+    transform: translateY(48px);
+    opacity: 0;
+}
+
+.showRespMenu{
+    transform: translateY(70px);
+    opacity: 1;
+}
+
+
+@media(max-width: 1040px){
+    .menu{
+        width: 80%;
+    }
+}
+
+@media (max-width: 700px) {
+
+    #nav {
+        display: none;
+    }
+
+    .navContainer{
+        width: 100%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        display: flex !important;
+        justify-content: end;
+        align-items: center;
+        height: 80px;
+    }
+}
+
+@media (max-width: 500px){
+    .responsiveMenu{
+        a{
+            font-size: 16px;
+        }
+    }
+}
+
+
 

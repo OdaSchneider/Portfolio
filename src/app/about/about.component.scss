@@ -65,3 +65,29 @@
         padding: 12px;
     }
 }
+
+@media(max-width: 1040px){
+    .container{
+        width: 80%;
+    }
+}
+
+@media(max-width: 768px){
+    .content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chapterContainer{
+        width: 70%;
+    }
+}
+
+@media(max-width: 560px){
+    .indroductionContainer{
+        img{
+            width: 400px;
+        }
+    }
+}

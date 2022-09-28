@@ -4,12 +4,10 @@ h2{
 
 .container{
     height: auto;
-    width: calc(100% - 400px);
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 200px;
-    padding-right: 200px;
     padding-bottom: 80px;
     background-color: #1A1A1A;
     color: white;
@@ -21,7 +19,7 @@ h2{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .contentBox{
@@ -60,8 +58,19 @@ h2{
     align-items: center;
     margin-top: -32px;
     padding: 16px;
+    text-align: center;
 
     span{
         font-size: 18px;
+    }
+}
+
+@media(max-width: 910px){
+    .contentSkill{
+        width: 160px;
+
+        span{
+            font-size: 16px;
+        }
     }
 }

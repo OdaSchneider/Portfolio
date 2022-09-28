@@ -130,4 +130,17 @@ form {
     }
 }
 
+@media(max-width: 640px){
 
+    form{
+        width: 480px;
+
+        button{
+            transform: translateX(330px);
+        }
+    }
+
+    .container{
+        width: 80%;
+    }
+}

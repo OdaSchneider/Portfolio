@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,11 +6,21 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent {
+  @Input() darkMode = true;
+  open: boolean = false;
 
-  constructor() { }
+  openMenu() {
+    if(!this.open){
+      this.open = true;
+    }else{
+      this.open = false;
+    }
 
-  ngOnInit(): void {
+  }
+
+  closeMenu(){
+    this.open = false;
   }
 
 }
