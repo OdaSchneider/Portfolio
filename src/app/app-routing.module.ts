@@ -8,7 +8,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 const routes: Routes = [
   {path: '', component: MainpageComponent},
   {path: 'imprint', component: ImprintComponent},
-  {path: 'data-protection', component: DataProtectionComponent}
+  {path: 'data-protection', component: DataProtectionComponent},
+  {path: '**', component: MainpageComponent}
 ];
 
 @NgModule({

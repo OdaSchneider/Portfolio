@@ -3,7 +3,6 @@
         <img routerLink="/" src="../assets/img/logo-white.png">
 
         <div id="nav">
-            <a routerLink=''>Home</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Portfolio</a>
             <a href="#about">About me</a>
@@ -19,7 +18,6 @@
             </div>
         </div>
         <div class="responsiveMenu" [class.showRespMenu]="open" [class.hideRespMenu]="!open">
-            <a (click)="closeMenu()" routerLink="">Home</a>
             <a (click)="closeMenu()" href="#skills">Skills</a>
             <a (click)="closeMenu()" href="#projects">Portfolio</a>
             <a (click)="closeMenu()" href="#about">About me</a>
