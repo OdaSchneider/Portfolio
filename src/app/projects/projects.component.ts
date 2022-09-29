@@ -32,6 +32,7 @@ export class ProjectsComponent{
       name: 'Portfolio',
       description: 'Angular-based Personal webpage',
       category: 'angular',
+      link: 'https://oda-schneider.com/index.html',
       img: 'portfolio.jpg'
     }
   ];
