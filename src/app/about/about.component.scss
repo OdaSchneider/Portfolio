@@ -91,3 +91,38 @@
         }
     }
 }
+
+@media(max-width: 470px){
+    .content{
+        margin-top: 32px;
+    }
+
+    .indroductionContainer{
+        img{
+            width: 350px;
+            height: 200px;
+            margin: 16px;
+        }
+
+        h2{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media(max-width: 400px){
+
+    .indroductionContainer{
+        img{
+            width: 270px;
+            height: 200px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        h2{
+            margin-bottom: 0;
+        }
+    }
+}
+

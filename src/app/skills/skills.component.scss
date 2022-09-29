@@ -1,8 +1,8 @@
-h2{
+h2 {
     margin-bottom: unset;
 }
 
-.container{
+.container {
     height: auto;
     width: 100%;
     display: flex;
@@ -14,7 +14,7 @@ h2{
 }
 
 
-.content{
+.content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -22,14 +22,14 @@ h2{
     max-width: 1000px;
 }
 
-.contentBox{
+.contentBox {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 48px 16px 0px 16px;
 }
 
-.contentImg{
+.contentImg {
     background-color: white;
     width: 70px;
     height: 70px;
@@ -40,14 +40,14 @@ h2{
     box-shadow: 0px 2px 6px 0 rgb(0 0 0 / 40%);
     z-index: 1;
 
-    img{
+    img {
         width: 40px;
         height: 40px;
     }
 }
 
 
-.contentSkill{
+.contentSkill {
     color: rgb(37, 37, 37);
     background-color: white;
     width: 190px;
@@ -60,17 +60,43 @@ h2{
     padding: 16px;
     text-align: center;
 
-    span{
+    span {
         font-size: 18px;
     }
 }
 
-@media(max-width: 910px){
-    .contentSkill{
+@media(max-width: 910px) {
+    .contentSkill {
         width: 160px;
 
-        span{
+        span {
             font-size: 16px;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .contentSkill {
+        width: 120px;
+    }
+}
+
+@media(max-width: 370px) {
+    .contentImg {
+        width: 60px;
+        height: 60px;
+
+        img {
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+    .contentSkill {
+        width: 100px;
+
+        span {
+            font-size: 14px;
         }
     }
 }

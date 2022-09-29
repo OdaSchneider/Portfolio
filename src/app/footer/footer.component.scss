@@ -96,3 +96,24 @@ span{
         }
     }
 }
+
+@media(max-width: 340px){
+    .container{        
+        div{
+            padding: 12px 0px 8px 0px;
+        }
+    }
+
+    .pageLinks{
+        img{
+            height: 30px;
+            margin-right: 12px;
+        }
+    }
+
+    .socialLinks{
+        img{
+            margin-left: 12px;
+        }
+    }
+}

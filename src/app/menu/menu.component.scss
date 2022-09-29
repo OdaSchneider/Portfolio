@@ -7,11 +7,13 @@ header{
 }
 
 .menu{
+    width: 100%;
+    max-width: 1000px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1000px;
+    z-index: 10;
+    background-color: black;
 
     a{
         color: white;
@@ -104,11 +106,12 @@ header{
     position: absolute;
     right: 0;
     left: 0;
+    background-color: rgba(0,0,0,0.7);
     transition: all .25s ease-in-out;
 }
 
 .hideRespMenu{
-    transform: translateY(48px);
+    transform: translateY(-10px);
     opacity: 0;
 }
 
@@ -136,7 +139,7 @@ header{
         right: 0;
         left: 0;
         display: flex !important;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         height: 80px;
     }
@@ -144,10 +147,39 @@ header{
 
 @media (max-width: 500px){
     .responsiveMenu{
+        flex-wrap: wrap;
         a{
             font-size: 16px;
+            margin-top: 8px;
         }
     }
+
+    .menu{
+        img{
+            height: 40px;
+        }
+    }
+
+    .showRespMenu{
+        transform: translateY(65px);
+    }
+}
+
+@media(max-width: 340px){
+    .menu{
+        img{
+            height: 32px;
+        }
+
+        .navContainer{
+            div{
+                height: 20px;
+                width: 24px;
+            }
+        }
+    }
+
+
 }
 
 

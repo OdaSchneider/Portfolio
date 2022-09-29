@@ -144,3 +144,36 @@ form {
         width: 80%;
     }
 }
+
+@media(max-width: 500px){
+
+    form{
+        width: 380px;
+
+        button{
+            transform: translateX(230px);
+        }
+    }
+}
+
+@media(max-width: 400px){
+
+    form{
+        width: 280px;
+
+        button{
+            transform: translateX(130px);
+        }
+    }
+}
+
+@media(max-width: 300px){
+
+    form{
+        width: 250px;
+
+        button{
+            transform: translateX(100px);
+        }
+    }
+}

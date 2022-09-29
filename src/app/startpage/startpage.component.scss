@@ -1,5 +1,5 @@
 .bg{
-    height: calc(100vh - 80px);
+    height: calc(100vh - 75px);
     background-color: black;
     width: 100%;
     display: flex;
@@ -131,5 +131,104 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+}
+
+@media(max-width: 450px){
+    .upperContainer{
+        button{
+            padding: 12px 64px 12px 64px;
+            margin-top: 8px;
+        }
+
+        h1{
+            font-size: 36px;
+        }
+    }
+}
+
+@media(max-width: 400px){
+    .upperContainer{
+        button{
+            padding: 12px 64px 12px 64px;
+            margin-top: 8px;
+        }
+
+        h1{
+            font-size: 30px;
+        }
+    }
+}
+
+@media(max-width: 340px){
+    .bg{
+        align-items: flex-start;
+    }
+
+    .upperContainer{
+        h1{
+            width: 140px;
+        }
+    }
+}
+
+@media(max-height: 630px){
+    .upperContainer{
+
+        img{
+            width: 160px;
+            height: 160px;
+            margin-bottom: unset;
+        }
+    }
+}
+
+@media(max-height: 460px){
+    .bg{
+        align-items: flex-start;
+    }
+
+    .upperContainer{
+
+        button{
+            margin-top: unset;
+            padding: 16px 90px 16px 90px;
+        }
+    }
+}
+
+@media(max-height: 545px) and (max-width: 700px){
+    
+    .upperContainer{
+
+        img{
+            width: 120px;
+            height: 120px;
+            border-radius: 32px;
+        }
+    }
+}
+
+@media(max-height: 475px) and (max-width: 700px){
+    
+    .upperContainer{
+
+        img{
+            display: none;
+        }
+    }
+}
+
+@media(max-height: 290px){
+    
+    .upperContainer{
+
+        h1{
+            font-size: 28px;
+        }
+
+        button{
+            padding: 8px 90px 8px 90px;
+        }
     }
 }
