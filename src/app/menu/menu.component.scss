@@ -111,6 +111,7 @@ header{
 .hideRespMenu{
     transform: translateY(-10px);
     opacity: 0;
+    z-index: -1;
 }
 
 .showRespMenu{
