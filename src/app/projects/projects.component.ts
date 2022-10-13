@@ -29,11 +29,11 @@ export class ProjectsComponent{
       img: 'join.jpg'
     },
     {
-      name: 'Portfolio',
-      description: 'Angular-based Personal webpage',
+      name: 'Ring of Fire',
+      description: 'Angular-based card game for sharing with friends online',
       category: 'angular',
-      link: 'https://oda-schneider.com/index.html',
-      img: 'portfolio.jpg'
+      link: 'https://ring-of-fire-7f2fe.web.app',
+      img: 'RingOfFire.jpg'
     }
   ];
 
