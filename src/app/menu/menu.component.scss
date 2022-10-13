@@ -37,6 +37,7 @@ header{
 
     .navContainer {
         display: none;
+        background-color: black;
 
         input {
             position: absolute;
@@ -115,7 +116,7 @@ header{
 }
 
 .showRespMenu{
-    transform: translateY(70px);
+    transform: translateY(50px);
     opacity: 1;
 }
 
