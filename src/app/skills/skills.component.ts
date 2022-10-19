@@ -8,13 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class SkillsComponent {
   skills: any = [
     {
-      name: 'JavaScript / TypeScript',
+      name: 'JavaScript',
       img: 'javascript.png'
     },
     {
-      name: 'Angular',
-      img: 'angular.png'
-    }, {
       name: 'HTML',
       img: 'html.png'
     },
@@ -23,18 +20,27 @@ export class SkillsComponent {
       img: 'css.png'
     },
     {
+      name: 'Angular',
+      img: 'angular.png'
+    }, 
+    {
+      name: 'Typescript',
+      img: 'typescript.png'
+    }, 
+    {
       name: 'Git',
       img: 'git.png'
     },
     {
       name: 'Rest-API',
       img: 'api.png'
-    }, {
+    }, 
+    {
       name: 'SCRUM',
       img: 'scrum.png'
     },
     {
-      name: 'Firebase (Database)',
+      name: 'Firebase',
       img: 'firebase.png'
     }
   ];
