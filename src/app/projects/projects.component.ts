@@ -29,11 +29,11 @@ export class ProjectsComponent{
       img: 'join.jpg'
     },
     {
-      name: 'Ring of Fire',
-      description: 'Angular-based card game for sharing with friends online',
+      name: 'Slack-Clone',
+      description: 'Angular-based messaging service modelled on Slack',
       category: 'angular',
-      link: 'https://ring-of-fire-7f2fe.web.app',
-      img: 'RingOfFire.jpg'
+      link: 'https://slack-clone-5c2d6.web.app/',
+      img: 'slack.jpg'
     }
   ];
 
