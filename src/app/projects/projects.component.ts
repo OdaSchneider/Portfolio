@@ -11,29 +11,33 @@ export class ProjectsComponent{
       name: 'El Pollo Loco',
       description: 'JavaScript - based object-oriented 2D jump and run game',
       category: 'javascript',
-      link: 'https://oda-schneider.com/Pollo%20Loco/index.html',
-      img: 'polloLoco.jpg'
+      link: 'https://oda-schneider-el-pollo-loco.web.app/',
+      img: 'polloLoco.jpg',
+      video: 'polloLoco.mp4',
+      playVideo: false
     },
     {
       name: 'Pokedex',
       description: 'Famous poke-lexicon created with PokeAPI',
       category: 'javascript',
-      link: 'https://oda-schneider.com/pokedex/index.html',
+      link: 'https://oda-schneider-pokedex.web.app/',
       img: 'pokedex.png'
     },
-    {
-      name: 'JOIN',
-      description: 'Kanban-Board created in group work',
-      category: 'javascript',
-      link: 'https://oda-schneider.com/Join/index.html',
-      img: 'join.jpg'
-    },
+    // {
+    //   name: 'JOIN',
+    //   description: 'Kanban-Board created in group work',
+    //   category: 'javascript',
+    //   link: 'https://oda-schneider.com/Join/index.html',
+    //   img: 'join.jpg'
+    // },
     {
       name: 'Slack-Clone',
       description: 'Angular-based messaging service modelled on Slack',
       category: 'angular',
       link: 'https://slack-clone-5c2d6.web.app/',
-      img: 'slack.jpg'
+      img: 'slack.jpg',
+      video: 'slack.mp4',
+      playVideo: false
     }
   ];
 
@@ -65,6 +69,16 @@ export class ProjectsComponent{
         this.categories[type] = false;
       }
     }
+  }
+
+
+  playVideo(i){
+    this.projects[i].playVideo = true;
+  }
+
+
+  stopVideo(i){
+    this.projects[i].playVideo = false;
   }
 
 }

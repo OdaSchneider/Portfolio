@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -26,6 +26,22 @@ export class SkillsComponent {
     {
       name: 'Typescript',
       img: 'typescript.png'
+    }, 
+    {
+      name: 'RxJS',
+      img: 'rxjs.png'
+    }, 
+    {
+      name: 'Jest',
+      img: 'jest.png'
+    }, 
+    {
+      name: 'Cypress',
+      img: 'cypress.png'
+    }, 
+    {
+      name: 'Playwright',
+      img: 'playwright.png'
     }, 
     {
       name: 'Git',

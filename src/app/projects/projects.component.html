@@ -18,11 +18,23 @@
         <div class="flexBox">
             <div *ngFor="let project of projectFilter; let i = index" class="content">
                 <div class="contentBox" data-aos="zoom-in" style="background-image: url('assets/img/{{project.img}}')">
-                    <div class="contentProject">
+                    <div *ngIf="!project.playVideo" class="contentProject">
                         <p>{{project.name}}</p><br>
                         <span>{{project.description}}</span><br>
                         <a target="_blank" href="{{ project.link }}"><button>Try it Out</button></a>
+                        <button *ngIf="project.video" (click)="playVideo(i)">Watch demo video</button>
                     </div>
+                    <div *ngIf="project.playVideo" class="videoProject">
+                        <button mat-mini-fab (click)="stopVideo(i)">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                        <vg-player>
+                            <video [vgMedia]="$any(media)" #media id="singleVideo" preload="auto" controls
+                                autoplay loop [muted]="'muted'">
+                                <source src="../../assets/video/{{ project.video }}" type="video/mp4">
+                            </video>
+                        </vg-player>
+                    </div>  
                 </div>
             </div>
         </div>

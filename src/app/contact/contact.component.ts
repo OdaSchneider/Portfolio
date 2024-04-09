@@ -11,10 +11,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms'
 export class ContactComponent implements OnInit {
   @ViewChild('sendButton') sendButton!: ElementRef;
 
-  contactForm: FormGroup;
-  submit: boolean = false;
-  report: string = '';
-  url: string = 'https://oda-schneider.com/send_mail/sendMail.php';
+  protected contactForm: FormGroup;
+  protected submit: boolean = false;
+  protected report: string = '';
+  private api: string = 'https://mailthis.to/oda.schneider@gmx.de';
 
 
   constructor(private http: HttpClient) {
@@ -34,11 +34,12 @@ export class ContactComponent implements OnInit {
   onSubmit(myForm: any) {
     this.sendButton.nativeElement.disabled = true;
     this.http
-      .post(this.url, myForm.value)
-      .subscribe(
-        response => this.response(response, myForm),
-        error => this.error(error, myForm)
-      );
+      .post(this.api, myForm.value)
+      .subscribe({
+        next: (response) => this.response(response, myForm),
+        error: (e) => this.error(e, myForm),
+        complete: () => console.log('complete'),
+    })
   }
 
 
